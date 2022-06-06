@@ -76,6 +76,9 @@ const getChecked = () => {
 
 function toggleFilter(event) {
   let element = event.target;
+  console.log("clicked")
+  console.log(element.matches(".filterBtn"))
+  console.log(filterOptions.classList.contains("hidden"))
   if (element.matches(".filterBtn")) {
     if (filterOptions.classList.contains("hidden")) {
       filterOptions.classList.replace("hidden", "visible");
@@ -119,7 +122,6 @@ function singleData(data, filters) {
       tableBody.appendChild(row);
     }
     table.appendChild(tableBody);
-    table.setAttribute("border", "2");
   }
   if (filters.length > 0) {
     let headText = document.createTextNode(data.state);
@@ -141,7 +143,6 @@ function singleData(data, filters) {
       tableBody.appendChild(row);
     }
     table.appendChild(tableBody);
-    table.setAttribute("border", "2");
   }
 }
 
@@ -175,7 +176,6 @@ function multipleData(data, filters) {
       tableBody.appendChild(row);
     }
     table.appendChild(tableBody);
-    table.setAttribute("border", "2");
   }
   // If filters is empty make a table with all of the data
   if (filters.length === 0) {
@@ -207,7 +207,6 @@ function multipleData(data, filters) {
       tableBody.appendChild(row);
     }
     table.appendChild(tableBody);
-    table.setAttribute("border", "2");
   }
 }
 
