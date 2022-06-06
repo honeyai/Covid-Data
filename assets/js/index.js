@@ -76,6 +76,9 @@ const getChecked = () => {
 
 function toggleFilter(event) {
   let element = event.target;
+  console.log("clicked")
+  console.log(element.matches(".filterBtn"))
+  console.log(filterOptions.classList.contains("hidden"))
   if (element.matches(".filterBtn")) {
     if (filterOptions.classList.contains("hidden")) {
       filterOptions.classList.replace("hidden", "visible");
